@@ -41,7 +41,7 @@ def main(index_file, clip_model: str = "ViT-B/32", tags_file: str = "general.txt
     index.register_model(
         id=1,
         name="CLIP",
-        url="https://raw.githubusercontent.com/simon987/sist2-models/main/clip/models/clip-vit-base-patch32-q8.onnx",
+        url="https://raw.githubusercontent.com/sist2app/sist2-models/main/clip/models/clip-vit-base-patch32-q8.onnx",
         path="idx_512.clip",
         size=512,
         type="flat"
