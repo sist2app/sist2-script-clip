@@ -141,6 +141,10 @@ def main(index_file, clip_model: str = "ViT-B/32", tags_file: str = "general.txt
         index.set("clip_version", 0)
         index.set("clip_last_id", 0)
 
+    # Written before any work, not after it: a run that died partway through would otherwise be
+    # taken for a model change by the next one, and throw away everything it had committed
+    index.set("clip_model", clip_model)
+
     # Only consider documents that were modified since the last run of this script, resuming
     # at the last document committed if a previous run did not get to the end
     clip_version = int(index.get("clip_version", default=0))
@@ -180,7 +184,6 @@ def main(index_file, clip_model: str = "ViT-B/32", tags_file: str = "general.txt
 
     flush()
 
-    index.set("clip_model", clip_model)
     index.set("clip_version", index.versions[-1].id)
     index.set("clip_last_id", 0)
 
