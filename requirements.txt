@@ -1,7 +1,9 @@
 ftfy
 regex
 tqdm
-git+https://github.com/openai/CLIP.git
-git+https://github.com/simon987/sist2-python.git@2.0
+numpy
 torch
+torchvision
 typer
+git+https://github.com/openai/CLIP.git
+git+https://github.com/sist2app/sist2-python.git@2.1

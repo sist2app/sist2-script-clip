@@ -684,7 +684,6 @@ shopping cart
 shovel
 shower
 siamang
-cat
 silky terrier
 sink
 skateboard
@@ -699,7 +698,6 @@ slot
 sloth bear
 slug
 snail
-snake
 snorkel
 snowboard
 snow leopard
